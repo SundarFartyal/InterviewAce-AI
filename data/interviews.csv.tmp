@@ -1,0 +1,8 @@
+interview_id,candidate_name,email,category,experience_level,total_questions,average_score,started_at,completed_at
+INT-20260614-012023,Sundar,,SQL,Fresher,0,,2026-06-14T01:20:23,
+INT-20260614-012549,Sundar,,SQL,Fresher,2,5.5,2026-06-14T01:25:49,2026-06-14T01:28:03
+INT-20260614-014329,sundar,,Python,Fresher,0,,2026-06-14T01:43:29,
+INT-20260614-014552,Sundar,,Python,Fresher,0,,2026-06-14T01:45:52,
+INT-20260614-015058,Sundar,,Python,Fresher,5,6.8,2026-06-14T01:50:58,2026-06-14T01:53:41
+INT-20260614-015517,Sundar,,Power BI,Fresher,2,6.5,2026-06-14T01:55:17,2026-06-14T01:56:16
+INT-20260614-020218,Sundar,,HR,Fresher,2,5.5,2026-06-14T02:02:18,2026-06-14T02:03:12

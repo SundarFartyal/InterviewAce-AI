@@ -1,0 +1,353 @@
+question_id,category,experience_level,question
+SQL001,SQL,Fresher,What is the difference between WHERE and HAVING clauses in SQL?
+SQL002,SQL,Fresher,Write a query to find the second highest salary from an Employee table.
+SQL003,SQL,Fresher,"What is the difference between DELETE, TRUNCATE, and DROP?"
+SQL004,SQL,Fresher,What is a primary key and how is it different from a unique key?
+SQL005,SQL,Fresher,What is a foreign key and what purpose does it serve?
+SQL006,SQL,Fresher,Explain the difference between INNER JOIN and LEFT JOIN.
+SQL007,SQL,Fresher,What is the difference between CHAR and VARCHAR data types?
+SQL008,SQL,Fresher,What does the DISTINCT keyword do? Give an example.
+SQL009,SQL,Fresher,What is the difference between GROUP BY and ORDER BY?
+SQL010,SQL,Fresher,Write a query to count the number of employees in each department.
+SQL011,SQL,Fresher,What are aggregate functions? Name five of them.
+SQL012,SQL,Fresher,What is the difference between UNION and UNION ALL?
+SQL013,SQL,Fresher,What is a NULL value and how do you test for it in a WHERE clause?
+SQL014,SQL,Fresher,Explain the LIKE operator and its wildcard characters.
+SQL015,SQL,Fresher,What is the difference between IN and BETWEEN operators?
+SQL016,SQL,Fresher,Write a query to fetch the top 5 highest paid employees.
+SQL017,SQL,Fresher,What is the purpose of the GROUP BY clause?
+SQL018,SQL,Fresher,How do you rename a column in the result set of a query?
+SQL019,SQL,Fresher,What is the difference between COUNT(*) and COUNT(column_name)?
+SQL020,SQL,Fresher,Write a query to find all employees whose name starts with the letter 'A'.
+SQL021,SQL,Fresher,What is a subquery? Give a simple example.
+SQL022,SQL,Fresher,What does the ORDER BY clause do and what is the default sort order?
+SQL023,SQL,Fresher,Explain the difference between DDL and DML commands.
+SQL024,SQL,Fresher,What is the difference between a column alias and a table alias?
+SQL025,SQL,Fresher,Write a query to display unique job titles from an Employee table.
+SQL026,SQL,Fresher,How do you filter rows that contain NULL in a specific column?
+SQL027,SQL,Fresher,What is the LIMIT (or TOP) clause used for?
+SQL028,SQL,Fresher,Explain the difference between WHERE and ON in a JOIN.
+SQL029,SQL,Fresher,What is the difference between a table and a view?
+SQL030,SQL,Fresher,Write a query to find employees who earn more than the average salary.
+SQL031,SQL,Fresher,What does the AS keyword do in SQL?
+SQL032,SQL,Fresher,How do you concatenate two columns into a single output column?
+SQL033,SQL,Fresher,What is the difference between INT and FLOAT data types?
+SQL034,SQL,Fresher,Write a query to count how many employees were hired in each year.
+SQL035,SQL,Fresher,What is a composite key?
+SQL036,SQL,Fresher,Explain how the BETWEEN operator handles its boundary values.
+SQL037,SQL,Fresher,"Write a query to find the total, minimum, and maximum salary by department."
+SQL038,SQL,Fresher,What is the difference between ROUND and TRUNCATE functions on numbers?
+SQL039,SQL,Fresher,How do you sort results by two columns at once?
+SQL040,SQL,Fresher,"What is the purpose of the AND, OR, and NOT logical operators?"
+SQL041,SQL,1-3 Years,Explain different types of JOINs with an example use case for each.
+SQL042,SQL,1-3 Years,How would you find duplicate rows in a table and delete them?
+SQL043,SQL,1-3 Years,"What are window functions? Explain ROW_NUMBER, RANK, and DENSE_RANK."
+SQL044,SQL,1-3 Years,Write a query to find the Nth highest salary using a window function.
+SQL045,SQL,1-3 Years,What is a Common Table Expression (CTE) and when would you use one?
+SQL046,SQL,1-3 Years,Explain a correlated subquery and how it differs from a regular subquery.
+SQL047,SQL,1-3 Years,How do indexes work and how do they improve query performance?
+SQL048,SQL,1-3 Years,What is the difference between a clustered and a non-clustered index?
+SQL049,SQL,1-3 Years,Write a query to calculate a running total of sales by date.
+SQL050,SQL,1-3 Years,Explain the difference between a CTE and a temporary table.
+SQL051,SQL,1-3 Years,How would you pivot rows into columns in SQL?
+SQL052,SQL,1-3 Years,What is the difference between RANK and DENSE_RANK with a tie example?
+SQL053,SQL,1-3 Years,Explain how GROUP BY interacts with the HAVING clause using an example.
+SQL054,SQL,1-3 Years,Write a query to find customers who placed orders in every month of a year.
+SQL055,SQL,1-3 Years,What is a self join and give a practical example?
+SQL056,SQL,1-3 Years,How do you handle NULLs in aggregate functions and JOINs?
+SQL057,SQL,1-3 Years,Explain the COALESCE and NULLIF functions with examples.
+SQL058,SQL,1-3 Years,Write a query to find the difference in days between two dates per row.
+SQL059,SQL,1-3 Years,What is the execution order of a SQL SELECT statement?
+SQL060,SQL,1-3 Years,How would you find the top 3 products by sales within each category?
+SQL061,SQL,1-3 Years,Explain CASE WHEN and write a query that buckets salaries into ranges.
+SQL062,SQL,1-3 Years,"What is the difference between EXISTS and IN, and when is each faster?"
+SQL063,SQL,1-3 Years,Write a query using LAG or LEAD to compare each row with the previous one.
+SQL064,SQL,1-3 Years,How do you remove duplicate rows while keeping the most recent record?
+SQL065,SQL,1-3 Years,Explain the difference between a view and a materialized view.
+SQL066,SQL,1-3 Years,"What is normalization? Describe 1NF, 2NF, and 3NF briefly."
+SQL067,SQL,1-3 Years,Write a query to find months with no sales (gaps in a date series).
+SQL068,SQL,1-3 Years,How would you calculate a month-over-month growth percentage?
+SQL069,SQL,1-3 Years,What does PARTITION BY do in a window function?
+SQL070,SQL,1-3 Years,Explain the difference between WHERE and QUALIFY (or a filtered window).
+SQL071,SQL,1-3 Years,How do you find the median salary using SQL?
+SQL072,SQL,1-3 Years,Write a query to find employees who earn more than their manager.
+SQL073,SQL,1-3 Years,What are the trade-offs of adding more indexes to a table?
+SQL074,SQL,1-3 Years,Explain how a LEFT JOIN can be used to find non-matching rows.
+SQL075,SQL,1-3 Years,Write a query to deduplicate using ROW_NUMBER() OVER (PARTITION BY ...).
+SQL076,SQL,3-5 Years,Explain window functions and write a query to rank employees by salary within each department.
+SQL077,SQL,3-5 Years,How would you optimize a slow-running query? Walk through your process.
+SQL078,SQL,3-5 Years,What is a query execution plan and how do you read one?
+SQL079,SQL,3-5 Years,Explain different isolation levels and the problems they prevent.
+SQL080,SQL,3-5 Years,What are deadlocks and how would you diagnose and prevent them?
+SQL081,SQL,3-5 Years,Describe how you would design a star schema for a sales data warehouse.
+SQL082,SQL,3-5 Years,When would you denormalize a database and what are the trade-offs?
+SQL083,SQL,3-5 Years,Explain partitioning strategies for very large tables.
+SQL084,SQL,3-5 Years,How do covering indexes work and when do they help?
+SQL085,SQL,3-5 Years,What is the difference between OLTP and OLAP workloads in design terms?
+SQL086,SQL,3-5 Years,How would you detect and resolve a parameter-sniffing performance issue?
+SQL087,SQL,3-5 Years,Explain how you would implement slowly changing dimensions (SCD Type 2).
+SQL088,SQL,3-5 Years,Describe strategies for incremental data loads in an ETL pipeline.
+SQL089,SQL,3-5 Years,How do you approach indexing for a table with heavy read and write load?
+SQL090,SQL,3-5 Years,Explain the cost of correlated subqueries and how to rewrite them as joins.
+SQL091,SQL,3-5 Years,How would you find and eliminate the bottleneck in a nightly batch job?
+SQL092,SQL,3-5 Years,"Explain recursive CTEs and give a real use case (e.g., org hierarchy)."
+SQL093,SQL,3-5 Years,What strategies reduce lock contention in a high-concurrency system?
+SQL094,SQL,3-5 Years,How would you design a query to compute rolling 7-day active users?
+SQL095,SQL,3-5 Years,Explain the difference between logical and physical query optimization.
+SQL096,SQL,3-5 Years,How do statistics and cardinality estimation affect the optimizer?
+SQL097,SQL,3-5 Years,Describe how you would audit and refactor a 500-line stored procedure.
+SQL098,SQL,3-5 Years,What are the trade-offs between application-side and database-side joins?
+SQL099,SQL,3-5 Years,How would you handle a data-skew problem in a grouped aggregation?
+SQL100,SQL,3-5 Years,Explain how to design idempotent SQL for safe pipeline retries.
+PY001,Python,Fresher,What is the difference between a list and a tuple in Python?
+PY002,Python,Fresher,How do you handle missing values in a pandas DataFrame?
+PY003,Python,Fresher,What is the difference between a list and a set?
+PY004,Python,Fresher,Explain the difference between == and is in Python.
+PY005,Python,Fresher,What are list comprehensions? Give an example.
+PY006,Python,Fresher,How do you read a CSV file into a pandas DataFrame?
+PY007,Python,Fresher,What is the difference between loc and iloc in pandas?
+PY008,Python,Fresher,What is a dictionary and when would you use one?
+PY009,Python,Fresher,Explain mutable vs immutable types with examples.
+PY010,Python,Fresher,How do you remove duplicate rows from a DataFrame?
+PY011,Python,Fresher,What does the groupby function do in pandas? Give an example.
+PY012,Python,Fresher,How do you filter rows in a DataFrame based on a condition?
+PY013,Python,Fresher,What is the difference between append and extend on a list?
+PY014,Python,Fresher,How do you handle exceptions in Python using try/except?
+PY015,Python,Fresher,What is a function and how do you define one with default arguments?
+PY016,Python,Fresher,How do you select specific columns from a DataFrame?
+PY017,Python,Fresher,What is the difference between a for loop and a while loop?
+PY018,Python,Fresher,How do you check the data types of columns in a DataFrame?
+PY019,Python,Fresher,What does the apply function do in pandas?
+PY020,Python,Fresher,How do you sort a DataFrame by a column?
+PY021,Python,Fresher,What is slicing and how does it work on a list?
+PY022,Python,Fresher,How do you rename columns in a pandas DataFrame?
+PY023,Python,Fresher,What is the difference between Series and DataFrame in pandas?
+PY024,Python,Fresher,How do you count unique values in a DataFrame column?
+PY025,Python,Fresher,What does the lambda keyword do? Give an example.
+PY026,Python,Fresher,How do you fill missing values with the mean of a column?
+PY027,Python,Fresher,What is the difference between range and a list?
+PY028,Python,Fresher,How do you merge two DataFrames on a common column?
+PY029,Python,Fresher,What are *args and **kwargs used for?
+PY030,Python,Fresher,How do you convert a column to datetime in pandas?
+PY031,Python,Fresher,What is the difference between a shallow copy and a deep copy?
+PY032,Python,Fresher,How do you create a new column derived from existing columns?
+PY033,Python,Fresher,What does value_counts() do in pandas?
+PY034,Python,Fresher,How do you drop a column from a DataFrame?
+PY035,Python,Fresher,What is the purpose of the enumerate function?
+PY036,Python,Fresher,How do you read only the first 5 rows of a DataFrame?
+PY037,Python,Fresher,What is the difference between sort_values and sort_index?
+PY038,Python,Fresher,How do you replace specific values in a DataFrame column?
+PY039,Python,Fresher,What is f-string formatting and why is it useful?
+PY040,Python,Fresher,How do you find the number of rows and columns in a DataFrame?
+PY041,Python,1-3 Years,"Explain the difference between merge, join, and concat in pandas."
+PY042,Python,1-3 Years,Write a function to find the most frequent value in a list without using collections.Counter.
+PY043,Python,1-3 Years,"What is the difference between map, apply, and applymap in pandas?"
+PY044,Python,1-3 Years,How do you handle categorical variables before modeling?
+PY045,Python,1-3 Years,Explain the difference between pivot and pivot_table.
+PY046,Python,1-3 Years,What is method chaining in pandas and why is it useful?
+PY047,Python,1-3 Years,How do you optimize memory usage of a large DataFrame?
+PY048,Python,1-3 Years,Explain the difference between a generator and a list comprehension.
+PY049,Python,1-3 Years,How would you detect and handle outliers in a numeric column?
+PY050,Python,1-3 Years,What is vectorization and why is it faster than looping in pandas?
+PY051,Python,1-3 Years,Explain the use of groupby with multiple aggregation functions.
+PY052,Python,1-3 Years,How do you reshape data using melt and pivot?
+PY053,Python,1-3 Years,"What is the difference between merge types: inner, outer, left, right?"
+PY054,Python,1-3 Years,How do you create a rolling average over a time series in pandas?
+PY055,Python,1-3 Years,Explain the difference between copy and view in pandas (SettingWithCopyWarning).
+PY056,Python,1-3 Years,How would you write a function with proper error handling and logging?
+PY057,Python,1-3 Years,What are decorators in Python and when would you use one?
+PY058,Python,1-3 Years,How do you resample time-series data to a monthly frequency?
+PY059,Python,1-3 Years,Explain how to use apply with axis=1 versus axis=0.
+PY060,Python,1-3 Years,How do you merge DataFrames with different key column names?
+PY061,Python,1-3 Years,What is the difference between is null detection methods isna and isnull?
+PY062,Python,1-3 Years,How would you bucket a continuous variable into quantiles with pd.qcut?
+PY063,Python,1-3 Years,Explain the difference between a Python module and a package.
+PY064,Python,1-3 Years,How do you handle duplicate column names after a merge?
+PY065,Python,1-3 Years,What is the difference between iterrows and itertuples and which is faster?
+PY066,Python,1-3 Years,How do you compute a cumulative sum within groups?
+PY067,Python,1-3 Years,Explain how to use the agg function with a dictionary of aggregations.
+PY068,Python,1-3 Years,How would you read a large CSV that does not fit in memory?
+PY069,Python,1-3 Years,What is the difference between shallow and deep copy for nested lists?
+PY070,Python,1-3 Years,How do you write unit tests for a data-cleaning function?
+PY071,Python,1-3 Years,Explain the difference between Series.map and Series.replace.
+PY072,Python,1-3 Years,How would you join sales and customer data and compute revenue per region?
+PY073,Python,1-3 Years,What is the GIL and how does it affect multithreaded Python?
+PY074,Python,1-3 Years,How do you handle dates spanning multiple time zones in pandas?
+PY075,Python,1-3 Years,Explain how to profile and speed up a slow pandas transformation.
+PY076,Python,3-5 Years,How would you optimize a slow pandas operation on a large dataset?
+PY077,Python,3-5 Years,"Describe how you would structure a reusable, testable ETL pipeline in Python."
+PY078,Python,3-5 Years,"Explain the trade-offs between pandas, Polars, and Dask for large data."
+PY079,Python,3-5 Years,How do you design a function to be both memory- and CPU-efficient?
+PY080,Python,3-5 Years,Explain how Python manages memory and what garbage collection does.
+PY081,Python,3-5 Years,How would you parallelize a CPU-bound data task in Python?
+PY082,Python,3-5 Years,Describe your approach to handling schema drift in incoming data files.
+PY083,Python,3-5 Years,"How do you build a data-validation layer for a pipeline (e.g., with assertions or a schema)?"
+PY084,Python,3-5 Years,Explain how you would refactor a 1000-line notebook into a production module.
+PY085,Python,3-5 Years,How would you implement incremental processing to avoid reprocessing all data?
+PY086,Python,3-5 Years,Describe strategies for handling data that is too large to fit in memory.
+PY087,Python,3-5 Years,How do you ensure reproducibility in a data analysis project?
+PY088,Python,3-5 Years,Explain how you would benchmark two implementations of the same transform.
+PY089,Python,3-5 Years,How would you design logging and monitoring for a scheduled data job?
+PY090,Python,3-5 Years,What design patterns do you use to keep data pipelines maintainable?
+PY091,Python,3-5 Years,How do you handle and recover from partial failures in a multi-step pipeline?
+PY092,Python,3-5 Years,Explain the trade-offs of using SQL vs pandas for heavy aggregations.
+PY093,Python,3-5 Years,How would you implement a caching layer for expensive computations?
+PY094,Python,3-5 Years,Describe how you would test a pipeline end-to-end before deployment.
+PY095,Python,3-5 Years,How do you manage dependencies and environments across a data team?
+PY096,Python,3-5 Years,Explain how chunking and generators help process streaming data.
+PY097,Python,3-5 Years,How would you detect data-quality regressions automatically over time?
+PY098,Python,3-5 Years,"Describe your approach to writing idempotent, retry-safe data jobs."
+PY099,Python,3-5 Years,How would you optimize joins on very large pandas DataFrames?
+PY100,Python,3-5 Years,Explain how you would profile memory leaks in a long-running Python service.
+STA001,Statistics,Fresher,"Explain the difference between mean, median, and mode and when to use each."
+STA002,Statistics,Fresher,What is the difference between population and sample?
+STA003,Statistics,Fresher,What is standard deviation and what does it tell you?
+STA004,Statistics,Fresher,Explain the difference between variance and standard deviation.
+STA005,Statistics,Fresher,What is the difference between descriptive and inferential statistics?
+STA006,Statistics,Fresher,What is a normal distribution and what are its key properties?
+STA007,Statistics,Fresher,Explain the difference between discrete and continuous variables.
+STA008,Statistics,Fresher,What is the range and the interquartile range (IQR)?
+STA009,Statistics,Fresher,What is an outlier and how can it affect the mean?
+STA010,Statistics,Fresher,Explain the difference between correlation and causation.
+STA011,Statistics,Fresher,What is probability and how is it expressed?
+STA012,Statistics,Fresher,What is the difference between a histogram and a bar chart?
+STA013,Statistics,Fresher,Explain what skewness means in a distribution.
+STA014,Statistics,Fresher,What is the difference between independent and dependent variables?
+STA015,Statistics,Fresher,What is a percentile and how is it interpreted?
+STA016,Statistics,Fresher,Explain the difference between qualitative and quantitative data.
+STA017,Statistics,Fresher,What does a box plot show about a dataset?
+STA018,Statistics,Fresher,What is the difference between nominal and ordinal data?
+STA019,Statistics,Fresher,Explain what the mode is and when it is most useful.
+STA020,Statistics,Fresher,What is the empirical (68-95-99.7) rule?
+STA021,Statistics,1-3 Years,What is a p-value and how do you interpret it?
+STA022,Statistics,1-3 Years,Explain the Central Limit Theorem in simple terms.
+STA023,Statistics,1-3 Years,What is a confidence interval and how do you interpret a 95% interval?
+STA024,Statistics,1-3 Years,Explain the difference between a one-tailed and a two-tailed test.
+STA025,Statistics,1-3 Years,"What is correlation coefficient and what do values near 0, 1, and -1 mean?"
+STA026,Statistics,1-3 Years,What is the difference between a t-test and a z-test?
+STA027,Statistics,1-3 Years,Explain what a null and alternative hypothesis are.
+STA028,Statistics,1-3 Years,What is statistical significance and how is it determined?
+STA029,Statistics,1-3 Years,Explain the concept of sampling bias and how to reduce it.
+STA030,Statistics,1-3 Years,What is the difference between covariance and correlation?
+STA031,Statistics,1-3 Years,Explain what a chi-square test is used for.
+STA032,Statistics,1-3 Years,What is regression analysis and what does the slope coefficient mean?
+STA033,Statistics,1-3 Years,Explain the difference between R-squared and adjusted R-squared.
+STA034,Statistics,1-3 Years,What is the difference between a parameter and a statistic?
+STA035,Statistics,1-3 Years,Explain what ANOVA is used for.
+STA036,Statistics,1-3 Years,What is the difference between Type I and Type II conceptually?
+STA037,Statistics,1-3 Years,Explain what a probability distribution function is.
+STA038,Statistics,1-3 Years,What is the law of large numbers?
+STA039,Statistics,3-5 Years,Describe Type I and Type II errors and how you balance them in a hypothesis test.
+STA040,Statistics,3-5 Years,Explain statistical power and what factors influence it.
+STA041,Statistics,3-5 Years,How would you design and analyze an A/B test end to end?
+STA042,Statistics,3-5 Years,Explain the multiple-comparisons problem and how to correct for it.
+STA043,Statistics,3-5 Years,What is the difference between Bayesian and frequentist inference?
+STA044,Statistics,3-5 Years,How do you detect and handle multicollinearity in a regression model?
+STA045,Statistics,3-5 Years,Explain the bias-variance trade-off.
+STA046,Statistics,3-5 Years,How would you choose an appropriate sample size for an experiment?
+STA047,Statistics,3-5 Years,Explain what p-hacking is and how to avoid it.
+STA048,Statistics,3-5 Years,How do you handle confounding variables in an observational study?
+STA049,Statistics,3-5 Years,Explain the assumptions of linear regression and how to check them.
+STA050,Statistics,3-5 Years,How would you analyze an experiment with unequal group sizes and variances?
+PBI001,Power BI,Fresher,What is the difference between a calculated column and a measure in Power BI?
+PBI002,Power BI,Fresher,What is Power Query used for?
+PBI003,Power BI,Fresher,What is DAX and what is it used for?
+PBI004,Power BI,Fresher,Explain the difference between Power BI Desktop and Power BI Service.
+PBI005,Power BI,Fresher,What is a slicer and how is it used in a report?
+PBI006,Power BI,Fresher,What are the main views in Power BI Desktop?
+PBI007,Power BI,Fresher,What is the difference between a report and a dashboard in Power BI?
+PBI008,Power BI,Fresher,How do you import data into Power BI from an Excel file?
+PBI009,Power BI,Fresher,What is a relationship between tables in Power BI?
+PBI010,Power BI,Fresher,What is the difference between SUM and AVERAGE in DAX?
+PBI011,Power BI,Fresher,What are visuals and name five common visual types.
+PBI012,Power BI,Fresher,What is a data model in Power BI?
+PBI013,Power BI,Fresher,How do you create a basic bar chart in Power BI?
+PBI014,Power BI,Fresher,What is the role of the Fields pane?
+PBI015,Power BI,Fresher,What does 'Get Data' allow you to do in Power BI?
+PBI016,Power BI,Fresher,What is a tooltip and how can it enhance a visual?
+PBI017,Power BI,Fresher,How do you filter a visual using the Filters pane?
+PBI018,Power BI,Fresher,What is the difference between a column and a measure visually?
+PBI019,Power BI,Fresher,What is a KPI visual used for?
+PBI020,Power BI,Fresher,How do you publish a report to the Power BI Service?
+PBI021,Power BI,1-3 Years,Explain the difference between DAX functions SUM and SUMX.
+PBI022,Power BI,1-3 Years,What is a star schema and why is it preferred in Power BI data models?
+PBI023,Power BI,1-3 Years,Explain the CALCULATE function and why it is important in DAX.
+PBI024,Power BI,1-3 Years,What is the difference between RELATED and RELATEDTABLE?
+PBI025,Power BI,1-3 Years,How do you create a date table and why is it important?
+PBI026,Power BI,1-3 Years,Explain the difference between a measure and a calculated column for performance.
+PBI027,Power BI,1-3 Years,What is the difference between import mode and DirectQuery?
+PBI028,Power BI,1-3 Years,"How do you implement time intelligence (e.g., year-to-date) in DAX?"
+PBI029,Power BI,1-3 Years,"Explain how relationships and cardinality (1:many, many:many) work."
+PBI030,Power BI,1-3 Years,What is the ALL function and when would you use it?
+PBI031,Power BI,1-3 Years,How do you create a calculated table in Power BI?
+PBI032,Power BI,1-3 Years,Explain the difference between FILTER and CALCULATE.
+PBI033,Power BI,1-3 Years,What is a bidirectional relationship and what risks does it carry?
+PBI034,Power BI,1-3 Years,How would you create a measure that ignores a slicer selection?
+PBI035,Power BI,1-3 Years,Explain how Power Query M is different from DAX.
+PBI036,Power BI,1-3 Years,How do you handle slowly changing dimensions in a Power BI model?
+PBI037,Power BI,1-3 Years,What is the VALUES function used for in DAX?
+PBI038,Power BI,1-3 Years,How do you optimize a Power Query for faster refresh?
+PBI039,Power BI,3-5 Years,Explain row context vs filter context in DAX with an example.
+PBI040,Power BI,3-5 Years,How would you optimize a slow Power BI report and data model?
+PBI041,Power BI,3-5 Years,Explain context transition and when CALCULATE triggers it.
+PBI042,Power BI,3-5 Years,How do you design an enterprise-grade semantic model in Power BI?
+PBI043,Power BI,3-5 Years,Explain aggregations and composite models for large datasets.
+PBI044,Power BI,3-5 Years,How would you implement row-level security (RLS) for multiple roles?
+PBI045,Power BI,3-5 Years,Describe how VertiPaq compression works and how to reduce model size.
+PBI046,Power BI,3-5 Years,How do you debug an incorrect DAX measure that returns wrong totals?
+PBI047,Power BI,3-5 Years,Explain incremental refresh and when you would configure it.
+PBI048,Power BI,3-5 Years,How would you handle a many-to-many relationship correctly in DAX?
+PBI049,Power BI,3-5 Years,Describe best practices for deploying and version-controlling Power BI reports.
+PBI050,Power BI,3-5 Years,How do you use variables in DAX to improve readability and performance?
+HR001,HR,Fresher,Tell me about yourself and why you want to be a Data Analyst.
+HR002,HR,Fresher,What are your strengths and weaknesses?
+HR003,HR,Fresher,Why do you want to work as a Data Analyst?
+HR004,HR,Fresher,What interests you about working with data?
+HR005,HR,Fresher,Where do you see yourself in five years?
+HR006,HR,Fresher,Why did you choose this career path?
+HR007,HR,Fresher,What do you know about our company?
+HR008,HR,Fresher,How do you handle constructive criticism?
+HR009,HR,Fresher,Describe a project you are proud of and your role in it.
+HR010,HR,Fresher,How do you keep your technical skills up to date?
+HR011,HR,Fresher,What motivates you at work?
+HR012,HR,Fresher,How do you handle tight deadlines as a beginner?
+HR013,HR,Fresher,Tell me about a time you learned a new tool quickly.
+HR014,HR,Fresher,What do you do when you don't know how to solve a problem?
+HR015,HR,Fresher,How would your professors or peers describe you?
+HR016,HR,Fresher,Why should we hire you for this role?
+HR017,HR,Fresher,What are your salary expectations?
+HR018,HR,Fresher,How do you prioritize tasks when everything feels urgent?
+HR019,HR,Fresher,Tell me about a time you worked in a team.
+HR020,HR,Fresher,What is your biggest professional achievement so far?
+HR021,HR,1-3 Years,Describe a time you used data to influence a business decision.
+HR022,HR,1-3 Years,How do you prioritize multiple analysis requests with tight deadlines?
+HR023,HR,1-3 Years,Tell me about a time you made a mistake in an analysis and how you handled it.
+HR024,HR,1-3 Years,How do you explain technical findings to non-technical stakeholders?
+HR025,HR,1-3 Years,Describe a time you had to learn a new domain quickly for a project.
+HR026,HR,1-3 Years,How do you handle conflicting priorities from different stakeholders?
+HR027,HR,1-3 Years,Tell me about a time you improved a process or report.
+HR028,HR,1-3 Years,How do you ensure the accuracy and quality of your analysis?
+HR029,HR,1-3 Years,Describe a situation where your recommendation was rejected. What did you do?
+HR030,HR,1-3 Years,How do you handle a stakeholder who keeps changing requirements?
+HR031,HR,1-3 Years,Tell me about a time you had to deliver bad news from the data.
+HR032,HR,1-3 Years,How do you balance speed and accuracy in your work?
+HR033,HR,1-3 Years,Describe a time you collaborated with engineering or product teams.
+HR034,HR,1-3 Years,How do you handle ambiguous or poorly defined requests?
+HR035,HR,1-3 Years,Tell me about a time you went beyond what was asked.
+HR036,HR,1-3 Years,How do you manage your workload across multiple projects?
+HR037,HR,1-3 Years,Describe a time you received difficult feedback and how you responded.
+HR038,HR,3-5 Years,Tell me about a time you disagreed with a stakeholder on a data interpretation and how you handled it.
+HR039,HR,3-5 Years,Describe how you have mentored or upskilled junior analysts.
+HR040,HR,3-5 Years,Tell me about a time you led a data initiative from start to finish.
+HR041,HR,3-5 Years,How do you align analytics work with broader business strategy?
+HR042,HR,3-5 Years,Describe a time you influenced a major decision at the leadership level.
+HR043,HR,3-5 Years,How do you build a data-driven culture within a team or organization?
+HR044,HR,3-5 Years,Tell me about a time you had to push back on an executive request.
+HR045,HR,3-5 Years,How do you handle competing priorities across multiple teams you support?
+HR046,HR,3-5 Years,Describe a time you identified a business opportunity others missed.
+HR047,HR,3-5 Years,How do you measure the impact and ROI of your analytics work?
+HR048,HR,3-5 Years,Tell me about a difficult stakeholder relationship you turned around.
+HR049,HR,3-5 Years,How do you decide when an analysis is good enough to ship?
+HR050,HR,3-5 Years,Describe how you handle a situation where the data contradicts leadership's beliefs.
+HR051,HR,3-5 Years,How do you set standards and best practices for an analytics team?
+HR052,HR,3-5 Years,Tell me about a time you had to make a decision with incomplete data.
