@@ -183,10 +183,14 @@ def render_setup():
                 f"combination, so the interview will use all of them."
             )
 
-        st.session_state.interview_id = data_handler.create_interview(
-            name, email, st.session_state.category,
-            st.session_state.experience_level
-        )
+        try:
+            st.session_state.interview_id = data_handler.create_interview(
+                name, email, st.session_state.category,
+                st.session_state.experience_level
+            )
+        except Exception as e:  # noqa: BLE001
+            st.error(f"Storage is not configured correctly: {e}")
+            return
         st.session_state.feedback_submitted = False
         st.session_state.started_at = datetime.now()
         st.session_state.questions = selected
@@ -448,7 +452,11 @@ def _history_csv_bytes(rows):
 
 def render_history():
     st.subheader("Interview history")
-    rows = data_handler.load_interviews(completed_only=True)
+    try:
+        rows = data_handler.load_interviews(completed_only=True)
+    except Exception as e:  # noqa: BLE001
+        st.error(f"Could not load history. Storage is not configured: {e}")
+        return
 
     if not rows:
         st.info("No completed interviews yet. Finish one to see it here.")

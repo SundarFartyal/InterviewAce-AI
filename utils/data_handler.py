@@ -38,7 +38,17 @@ try:
 except ImportError:
     pass
 
-import gspread
+# gspread may be missing on a misconfigured deployment. Import it lazily so the
+# app still boots and can show a clear configuration error instead of crashing
+# at import time with a ModuleNotFoundError.
+try:
+    import gspread
+    GSPREAD_AVAILABLE = True
+    GSPREAD_IMPORT_ERROR = ""
+except Exception as _e:  # noqa: BLE001
+    gspread = None
+    GSPREAD_AVAILABLE = False
+    GSPREAD_IMPORT_ERROR = str(_e)
 
 
 # ----------------------------------------------------------------------------
@@ -125,6 +135,12 @@ def _service_account_info():
 
 def _get_client():
     global _client
+    if not GSPREAD_AVAILABLE:
+        raise RuntimeError(
+            "The 'gspread' package is not installed. Add 'gspread==6.1.2' and "
+            "'google-auth==2.34.0' to requirements.txt, commit it to GitHub, "
+            f"and reboot the app. (import error: {GSPREAD_IMPORT_ERROR})"
+        )
     if _client is None:
         info = _service_account_info()
         if info:
