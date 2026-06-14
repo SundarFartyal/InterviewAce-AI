@@ -29,11 +29,38 @@ import csv
 import os
 from datetime import datetime
 
-from dotenv import load_dotenv
+# python-dotenv is optional. Locally it loads a .env file; on Streamlit Cloud
+# (where the package may not be installed) we silently skip it and rely on
+# environment variables / st.secrets instead.
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 import gspread
 
-load_dotenv()
+
+# ----------------------------------------------------------------------------
+# Config helper (env var first, then Streamlit secrets)
+# ----------------------------------------------------------------------------
+def get_secret(key, default=""):
+    """
+    Return a config value, checking os.environ first, then st.secrets.
+    Works locally (.env / real env vars) and on Streamlit Cloud (secrets),
+    and never fails if streamlit/secrets are unavailable.
+    """
+    value = os.getenv(key)
+    if value is not None:
+        return value
+    try:
+        import streamlit as st
+        if key in st.secrets:
+            return st.secrets[key]
+    except Exception:
+        pass
+    return default
+
 
 # ----------------------------------------------------------------------------
 # Paths / config
@@ -42,12 +69,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 QUESTIONS_CSV = os.path.join(DATA_DIR, "questions.csv")
 
-SERVICE_ACCOUNT_FILE = os.getenv(
+SERVICE_ACCOUNT_FILE = get_secret(
     "GOOGLE_SERVICE_ACCOUNT_FILE",
     os.path.join(BASE_DIR, "service_account.json"),
 )
-SHEET_KEY = os.getenv("GOOGLE_SHEET_KEY", "").strip()
-SHEET_NAME = os.getenv("GOOGLE_SHEET_NAME", "InterviewAce AI").strip()
+SHEET_KEY = str(get_secret("GOOGLE_SHEET_KEY", "")).strip()
+SHEET_NAME = str(get_secret("GOOGLE_SHEET_NAME", "InterviewAce AI")).strip()
 
 # Worksheet (tab) names and their headers.
 INTERVIEWS_TAB = "Interviews"
@@ -82,16 +109,37 @@ _spreadsheet = None
 _worksheets = {}
 
 
+def _service_account_info():
+    """
+    On Streamlit Cloud the service account is stored as a secrets dict under
+    [gcp_service_account]. Return that dict if present, else None.
+    """
+    try:
+        import streamlit as st
+        if "gcp_service_account" in st.secrets:
+            return dict(st.secrets["gcp_service_account"])
+    except Exception:
+        pass
+    return None
+
+
 def _get_client():
     global _client
     if _client is None:
-        if not os.path.exists(SERVICE_ACCOUNT_FILE):
+        info = _service_account_info()
+        if info:
+            # Streamlit Cloud path: build credentials from the secrets dict.
+            _client = gspread.service_account_from_dict(info)
+        elif os.path.exists(SERVICE_ACCOUNT_FILE):
+            # Local path: use the JSON key file.
+            _client = gspread.service_account(filename=SERVICE_ACCOUNT_FILE)
+        else:
             raise RuntimeError(
-                "Google service account file not found at "
-                f"'{SERVICE_ACCOUNT_FILE}'. Set GOOGLE_SERVICE_ACCOUNT_FILE in "
-                ".env or place service_account.json in the project root."
+                "No Google credentials found. Locally, place "
+                "service_account.json in the project root (or set "
+                "GOOGLE_SERVICE_ACCOUNT_FILE). On Streamlit Cloud, add a "
+                "[gcp_service_account] section to your app secrets."
             )
-        _client = gspread.service_account(filename=SERVICE_ACCOUNT_FILE)
     return _client
 
 

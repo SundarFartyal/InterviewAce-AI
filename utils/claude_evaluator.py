@@ -22,11 +22,28 @@ import os
 import re
 import time
 
-from dotenv import load_dotenv
+# python-dotenv is optional (not always present on Streamlit Cloud).
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 import anthropic
 
-load_dotenv()
+
+def _get_secret(key, default=""):
+    """Read config from env vars first, then Streamlit secrets."""
+    value = os.getenv(key)
+    if value is not None:
+        return value
+    try:
+        import streamlit as st
+        if key in st.secrets:
+            return st.secrets[key]
+    except Exception:
+        pass
+    return default
 
 # ----------------------------------------------------------------------------
 # Configuration
@@ -54,11 +71,11 @@ def _get_client():
     Build an Anthropic client. Raises RuntimeError with a clear message if the
     API key is missing so the UI can show a friendly error.
     """
-    api_key = os.getenv("ANTHROPIC_API_KEY")
+    api_key = _get_secret("ANTHROPIC_API_KEY")
     if not api_key:
         raise RuntimeError(
-            "ANTHROPIC_API_KEY is not set. Copy .env.example to .env and add "
-            "your key."
+            "ANTHROPIC_API_KEY is not set. Add it to .env locally or to your "
+            "Streamlit Cloud app secrets."
         )
     return anthropic.Anthropic(api_key=api_key, timeout=REQUEST_TIMEOUT)
 
